@@ -29,6 +29,29 @@ namespace LinkedList
             head = newNode;
             Console.WriteLine(newNode.data+" Inserted into the list in front ");
         }
+        public void Appending(int newValue1)
+        {
+            Node newNode1 = new Node(newValue1);
+            if (head == null)
+            {
+                head = newNode1;
+            }
+            else
+            {
+                Node lastNode = Last();
+                lastNode.next = newNode1;
+            }
+            Console.WriteLine(newNode1.data + " Inserted into the list in last ");
+        }
+        public Node Last()
+        {
+            Node temp = head;
+            while (temp.next != null)
+            {
+                temp = temp.next;
+            }
+            return temp;
+        }
 
         public void Display()
         {
