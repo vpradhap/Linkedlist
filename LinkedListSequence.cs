@@ -71,7 +71,7 @@ namespace LinkedList
                 {
                     if (pos == 2)
                     {
-                        Console.WriteLine("\nInsertion inbetween two nodes");
+                        Console.WriteLine("\n"+newNode.data+" is inserted between two nodes");
                         newNode.next = temp.next;
                         temp.next = newNode;
                         break;
@@ -82,10 +82,21 @@ namespace LinkedList
                 }
             }
         }
+        public void Pop()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is empty");
+                return;
+            }
+            
+            Console.WriteLine("\n"+head.data + " is deleted from the list");
+            head = head.next;
+        }
 
         public void Display()
         {
-            Console.WriteLine("\nLinked List Sequence\n");
+            Console.Write("\nLinked List Sequence\t");
             Node temp = head;
             if (temp == null)
             {
