@@ -52,6 +52,36 @@ namespace LinkedList
             }
             return temp;
         }
+        public void InsertInBetween(int pos, int newValue)
+        {
+            Node newNode = new Node(newValue);
+            if (pos == 1)
+            {
+                newNode.next = head;
+                head = newNode;
+            }
+            else if (pos <= 0)
+            {
+                Console.WriteLine("position not correct");
+            }
+            else if (pos > 1)
+            {
+                Node temp = head;
+                while (pos != 1)
+                {
+                    if (pos == 2)
+                    {
+                        Console.WriteLine("\nInsertion inbetween two nodes");
+                        newNode.next = temp.next;
+                        temp.next = newNode;
+                        break;
+                    }
+                    temp = temp.next;
+                    Console.WriteLine(pos);
+                    pos--;
+                }
+            }
+        }
 
         public void Display()
         {
