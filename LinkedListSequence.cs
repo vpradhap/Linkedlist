@@ -127,6 +127,24 @@ namespace LinkedList
             }
             Console.WriteLine("\n"+value + " is not present in the linked list");
         }
+        public void SearchAndInsert(int value, int data)
+        {
+            Node temp = head;
+            Node newNode = new Node(data);
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    Console.WriteLine("\n" + value + " is present in the linked list");
+                    newNode.next = temp.next;
+                    temp.next = newNode;
+                    Console.WriteLine("\n" + newNode.data + " is inserted next to "+value +" in the linked list");
+                    return;
+                }
+                temp = temp.next;
+            }
+            Console.WriteLine("\n" + value + " is not present in the linked list");
+        }
         public void Display()
         {
             Console.Write("\nLinked List Sequence\t");
