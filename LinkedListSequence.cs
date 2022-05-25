@@ -93,6 +93,26 @@ namespace LinkedList
             Console.WriteLine("\n"+head.data + " is deleted from the list");
             head = head.next;
         }
+        public void PopLast()
+        {
+            Node newNode = head;
+
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is empty");
+                return;
+            }
+            if (head.next == null)
+            {
+                head = null;
+            }
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            Console.WriteLine("\n" + newNode.next.data + " is deleted from the list");
+            newNode.next = null;
+        }
 
         public void Display()
         {

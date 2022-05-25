@@ -9,7 +9,8 @@ while (flag == 0)
     Console.WriteLine("2 - Inserting element at the last ");
     Console.WriteLine("3 - Inserting element between two nodes ");
     Console.WriteLine("4 - Deleting element at the front ");
-    
+    Console.WriteLine("5 - Deleting element at the last ");
+
     Console.Write("\nYour Pick : ");
     int pick = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine();
@@ -45,6 +46,15 @@ while (flag == 0)
             call3.Display();
             call3.Pop();
             call3.Display();
+            break;
+        case 5:
+            LinkedListSequence call4 = new LinkedListSequence();
+            call4.Appending(56);
+            call4.Appending(30);
+            call4.Appending(70);
+            call4.Display();
+            call4.PopLast();
+            call4.Display();
             break;
         default:
             flag = 1;
