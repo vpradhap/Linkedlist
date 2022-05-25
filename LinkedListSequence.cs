@@ -113,7 +113,20 @@ namespace LinkedList
             Console.WriteLine("\n" + newNode.next.data + " is deleted from the list");
             newNode.next = null;
         }
-
+        public void Search(int value)
+        {
+            Node temp = head;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    Console.WriteLine("\n"+value+" is present in the linked list" );
+                    return;
+                }
+                temp = temp.next;
+            }
+            Console.WriteLine("\n"+value + " is not present in the linked list");
+        }
         public void Display()
         {
             Console.Write("\nLinked List Sequence\t");
