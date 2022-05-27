@@ -145,6 +145,32 @@ namespace LinkedList
             }
             Console.WriteLine("\n" + value + " is not present in the linked list");
         }
+        public void SearchAndDelete(int value)
+        {
+            Node temp = head;
+            while (temp.next != null)
+            {
+                if (temp.next.data == value)
+                {
+                    temp.next = temp.next.next;
+                    Console.WriteLine("\n" + value + " is deleted from the linked list");
+                    return;
+                }
+                temp = temp.next;
+            }
+            Console.WriteLine("\n" + value + " is not present in the linked list");
+        }
+        public void Size()
+        {
+            int value = 0;
+            Node temp = head;
+            while (temp != null)
+            {
+                temp = temp.next;
+                value++;
+            }
+            Console.WriteLine("\nSize of linked list : "+value);
+        }
         public void Display()
         {
             Console.Write("\nLinked List Sequence\t");
