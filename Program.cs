@@ -16,6 +16,7 @@ while (flag == 0)
     Console.WriteLine("6 - Search element in the linked list ");
     Console.WriteLine("7 - Search and than insert element in the linked list ");
     Console.WriteLine("8 - Search and than delete element in the linked list ");
+    Console.WriteLine("9 - Sorting elements in the linked list ");
 
     Console.Write("\nYour Pick : ");
     int pick = Convert.ToInt32(Console.ReadLine());
@@ -82,6 +83,14 @@ while (flag == 0)
             call.SearchAndDelete(40);
             call.Display();
             call.Size();
+            break;
+        case 9:
+            call.Sorting(56);
+            call.Sorting(30);
+            call.Sorting(40);
+            call.Sorting(70);
+            Console.WriteLine("\nAfter Sorting ");
+            call.Display();
             break;
         default:
             flag = 1;

@@ -171,6 +171,28 @@ namespace LinkedList
             }
             Console.WriteLine("\nSize of linked list : "+value);
         }
+        public void Sorting(int value)
+        {
+            Node newNode = new Node(value);
+            Node temp = head;
+
+            if (head == null || head.data >= newNode.data)
+            {
+                newNode.next = head;
+
+                head = newNode;
+            }
+            else
+            {
+                while (temp.next != null && temp.next.data < newNode.data)
+                {
+                    temp = temp.next;
+                }
+                newNode.next = temp.next;
+                temp.next = newNode;
+            }
+            Console.WriteLine(newNode.data + " is inserted in the Linked List");
+        }
         public void Display()
         {
             Console.Write("\nLinked List Sequence\t");
